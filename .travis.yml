@@ -1,0 +1,47 @@
+dist: focal
+language: generic
+sudo: required
+
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+  include:
+
+     - name: "Python 3.7 on linux ppc64le"
+       os: linux
+       dist: bionic
+       arch: ppc64le
+       language: python
+       python: 3.7
+       before_install:
+       - hostnamectl
+       - python --version
+       - docker --version
+       install: skip
+       before_script: skip
+       script: skip
+       env:
+        - LIB_PATH="/usr/bin/shared/x86_64/v1"
+
+     - name: "Python 3.7 on linux s390x"
+       os: linux
+       dist: bionic
+       arch: s390x
+       language: python
+       python: 3.7
+       before_install:
+       - hostnamectl
+       - python --version
+       - docker --version
+       install: skip
+       before_script: skip
+       script: skip
+       env:
+       - LIB_PATH="/usr/bin/shared/x86_64/v1"
+
+before_install: skip
+install: skip
+script: skip
+after_success: skip
