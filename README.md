@@ -1,4 +1,4 @@
-# IBM-Travis
+# ibm-multiarch-travis
 IBM Travis Power/Z .yml config tests
 
 # Whats the purpose 
