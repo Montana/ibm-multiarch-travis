@@ -1,3 +1,4 @@
+---
 dist: focal
 language: generic
 sudo: required
@@ -8,8 +9,8 @@ services:
 matrix:
   fast_finish: true
   include:
-
-     - name: "Python 3.7 on linux ppc64le"
+  
+     - name: "Python 3.7 on Linux ppc64le"
        os: linux
        dist: bionic
        arch: ppc64le
@@ -21,12 +22,11 @@ matrix:
        - docker --version
        install: skip
        before_script: skip
-       script:
-       - python hello.py
+       script: hello.py
        env:
         - LIB_PATH="/usr/bin/shared/x86_64/v1"
 
-     - name: "Python 3.7 on linux s390x"
+     - name: "Python 3.7 on Linux S390x"
        os: linux
        dist: bionic
        arch: s390x
@@ -38,8 +38,7 @@ matrix:
        - docker --version
        install: skip
        before_script: skip
-       script:
-       - python hello.py
+       script: hello.py
        env:
        - LIB_PATH="/usr/bin/shared/x86_64/v1"
 
