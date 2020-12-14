@@ -22,9 +22,7 @@ matrix:
        - docker --version
        install: skip
        before_script: skip
-       script: 
-       - python hello.py
-       - manifest.sh
+       script: python hello.py
        env:
         - LIB_PATH="/usr/bin/shared/x86_64/v1"
 
